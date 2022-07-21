@@ -1,6 +1,5 @@
-const reviewTotalDisplay = document.querySelector('#reviews')
-
-const reviews = [
+var reviewTotalDisplay = document.querySelector('#reviews');
+var reviews = [
     {
         name: 'Sheia',
         stars: 5,
@@ -19,13 +18,11 @@ const reviews = [
         loyaltyUser: true,
         date: '27-03-2021'
     },
-]
-
+];
 // Solution
-function showReviewTotal (value : number) {
-    if(reviewTotalDisplay) {
-    reviewTotalDisplay.innerHTML = value.toString()
+function showReviewTotal(value) {
+    if (reviewTotalDisplay) {
+        reviewTotalDisplay.innerHTML = value.toString();
+    }
 }
-}
-
-showReviewTotal(reviews.length)
+showReviewTotal(reviews.length);

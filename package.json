@@ -1,0 +1,22 @@
+{
+  "name": "couchsurfing_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && npm run build:cp-public",
+    "build:cp-public": "cp ./public/** ./dist",
+    "type": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimLitjens/couchsurfing_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KimLitjens/couchsurfing_app/issues"
+  },
+  "homepage": "https://github.com/KimLitjens/couchsurfing_app#readme"
+}
