@@ -22,10 +22,10 @@ const reviews = [
 ]
 
 // Solution
-function showReviewTotal (value : number) {
+function showReviewTotal (value : number, reviewer: string) {
     if(reviewTotalDisplay) {
-    reviewTotalDisplay.innerHTML = value.toString()
+    reviewTotalDisplay.innerHTML = `review total ${value.toString()}| last reviewed by ${reviewer}`
 }
 }
 
-showReviewTotal(reviews.length)
+showReviewTotal(reviews.length, reviews[0].name)

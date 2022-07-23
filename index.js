@@ -20,9 +20,9 @@ var reviews = [
     },
 ];
 // Solution
-function showReviewTotal(value) {
+function showReviewTotal(value, reviewer) {
     if (reviewTotalDisplay) {
-        reviewTotalDisplay.innerHTML = value.toString();
+        reviewTotalDisplay.innerHTML = "review total ".concat(value.toString(), "| last reviewed by ").concat(reviewer);
     }
 }
-showReviewTotal(reviews.length);
+showReviewTotal(reviews.length, reviews[0].name);
