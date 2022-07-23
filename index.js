@@ -1,3 +1,5 @@
+var returningUserDisplay = document.querySelector('#returning-user');
+var userNameDisplay = document.querySelector('#user');
 var reviewTotalDisplay = document.querySelector('#reviews');
 var reviews = [
     {
@@ -19,10 +21,23 @@ var reviews = [
         date: '27-03-2021'
     },
 ];
-// Solution
-function showReviewTotal(value, reviewer) {
+function showReviewTotal(value, reviewer, isLoyalty) {
+    var iconDisplay = isLoyalty ? '⭐' : '';
     if (reviewTotalDisplay) {
-        reviewTotalDisplay.innerHTML = "review total ".concat(value.toString(), "| last reviewed by ").concat(reviewer);
+        reviewTotalDisplay.innerHTML = "review total ".concat(value.toString(), "| last reviewed by ").concat(reviewer, " ").concat(iconDisplay);
     }
 }
-showReviewTotal(reviews.length, reviews[0].name);
+showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
+var you = {
+    userName: 'Bobby',
+    isReturning: true
+};
+function populateUser(isReturning, userName) {
+    if (isReturning && returningUserDisplay) {
+        returningUserDisplay.innerHTML = 'back';
+    }
+    if (userNameDisplay) {
+        userNameDisplay.innerHTML = userName;
+    }
+}
+populateUser(you.isReturning, you.userName);
